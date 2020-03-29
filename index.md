@@ -12,7 +12,7 @@ This data output is publicly sourced from DBHydro. Please contact the owners of 
     sandbox="allow-same-origin allow-scripts"
     width="100%"
     height="1200"
-    width="1400"
+    width="1100"
     scrolling="yes"
     seamless="seamless"
     align="left"
