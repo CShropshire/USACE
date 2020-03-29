@@ -10,9 +10,9 @@ This data output is publicly sourced from DBHydro. Please contact the owners of 
 
 <iframe src="assets/bokeh.html"
     sandbox="allow-same-origin allow-scripts"
-    width="100%"
-    height="900"
-    width="800"
+    width="150%"
+    height="1200"
+    width="1400"
     scrolling="yes"
     seamless="seamless"
     frameborder="0">
