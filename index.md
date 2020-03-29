@@ -2,23 +2,18 @@
 layout: default
 ---
 
-# Header 1
+# Current Status as of 29MAR2020 
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+This data output is sourced from DBHydro. Please contact the owners of this page Clay Shropshire and Lane Fincher in order to learn more.
 
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
+### Ammonia Levels
 
 <iframe src="assets/bokeh.html"
     sandbox="allow-same-origin allow-scripts"
     width="100%"
-    height="500"
-    scrolling="no"
+    height="900"
+    wdith="700"
+    scrolling="yes"
     seamless="seamless"
     frameborder="0">
 </iframe>
