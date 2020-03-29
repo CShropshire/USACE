@@ -6,7 +6,7 @@ layout: default
 
 This data output is publicly sourced from DBHydro. 
 
-Please contact the owners of this page 1LT(Ret) Clay Shropshire and 1LT Fincher in order to learn more.
+Please contact the owners of this page 1LT(Ret) Clay Shropshire and 1LT Lane Fincher in order to learn more.
 
 ### Current Status as of 29MAR2020
 
