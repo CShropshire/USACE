@@ -76,7 +76,7 @@ def graph_stored_data():
 
 def main():
     import_csv()
-    graph_stored_data
+    graph_stored_data()
 
 if __name__== "__main__":
   main()
