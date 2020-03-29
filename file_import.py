@@ -13,6 +13,5 @@ def import_csv(target_file = 'datafiles\LakeO_AmmoniaReports.csv'):
         for row in active_reader:
             formatted = line_formatter(row)
             insert_data(formatted[0], formatted[1])
-    print(dataStorage)
+    
             
-import_csv()
