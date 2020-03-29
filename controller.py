@@ -1,7 +1,8 @@
 from model import *
 from bokeh.plotting import figure, output_file, show
 from bokeh.layouts import column, row
-from bokeh.models import HoverTool, NumeralTickFormatter
+from bokeh.models import HoverTool, NumeralTickFormatter, ColumnDataSource
+import os
 
 import csv
 import datetime
@@ -12,7 +13,7 @@ def line_formatter(input):
     else:
         print("Malformed line item passed to line_formatter")
 
-def import_csv(target_file = 'datafiles\LakeO_AmmoniaReports.csv'):
+def import_csv(target_file):
     with open(target_file, newline='') as csvfile:
         active_reader = csv.reader(csvfile, delimiter=',')
         for row in active_reader:
@@ -52,14 +53,16 @@ def convert_to_datetime(input):
     return output
 
 def graph_stored_data():   
-    today = str(datetime.date.today())
-    output_file("output/"+today+".html")
+    output_file("index.html")
+
+    
 
     plot_list = []
 
     for key in dataStorage:
         x = []
         y = []
+        
 
         data_chunk = dataStorage.get(key)
         for item in data_chunk:
@@ -77,12 +80,10 @@ def graph_stored_data():
         plot_list.append(p)
 
     # show the results
-    show(column(*plot_list, sizing_mode='scale_width')) 
- 
+    show(column(*plot_list, sizing_mode='scale_width'))
+    
 
-def main():
-    import_csv()
+def trigger(inputDirectory):
+    import_csv(inputDirectory)
     graph_stored_data()
-
-if __name__== "__main__":
-  main()
+    delete_all_stored_data()
