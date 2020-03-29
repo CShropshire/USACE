@@ -1,6 +1,8 @@
 from model import *
 from bokeh.plotting import figure, output_file, show
 from bokeh.layouts import column, row
+from bokeh.models import HoverTool, NumeralTickFormatter
+
 import csv
 import datetime
 
@@ -64,7 +66,10 @@ def graph_stored_data():
             y.append(item[1])        
 
         # create a new plot with a title and axis labels
-        p = figure(title=key, x_axis_label='Date and Time', y_axis_label='Ammonia Level', x_axis_type="datetime", plot_height=100)
+        p = figure(title=key, x_axis_label='', y_axis_label='Ammonia Level', x_axis_type="datetime", plot_height=100, tools='pan,wheel_zoom,save')
+
+        h = HoverTool(tooltips=[('Date:', '@x{%F %H:%M}'), ('Reading:', '@y')], formatters={'@x': 'datetime'})
+        p.add_tools(h)
 
         # add a line renderer with legend and line thickness
         p.line(x, y, legend_label="Ammonia", line_width=2)
