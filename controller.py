@@ -70,7 +70,7 @@ def graph_stored_data():
             y.append(item[1])        
 
         # create a new plot with a title and axis labels
-        p = figure(title=key, x_axis_label='', y_axis_label='Ammonia Level', x_axis_type="datetime", plot_height=100, tools='pan,wheel_zoom,save')
+        p = figure(title=key, x_axis_label='', y_axis_label='Ammonia Level', x_axis_type="datetime", plot_height=300, tools='pan,wheel_zoom,save')
 
         h = HoverTool(tooltips=[('Date:', '@x{%F %H:%M}'), ('Reading:', '@y')], formatters={'@x': 'datetime'})
         p.add_tools(h)
