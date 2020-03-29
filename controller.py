@@ -53,7 +53,7 @@ def convert_to_datetime(input):
     return output
 
 def graph_stored_data():   
-    output_file("index.html")
+    output_file("assets/bokeh.html")
 
     
 
